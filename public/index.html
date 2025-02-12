@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Website with Mini-Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Cool Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#games">Mini-Games</a></li>
+                <li><a href="#friends">Friends</a></li>
+                <li><a href="#chat">Chat</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="visitor-counter">
+            <span>All-Time Visitors: </span><span id="visitor-count">0</span>
+        </div>
+    </header>
+    <section id="home">
+        <div class="hero">
+            <h2>Experience the Coolness</h2>
+            <p>Join us to explore the awesomeness of the web.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a team of creative individuals dedicated to making the web a cooler place.</p>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service">
+                <h3>Web Design</h3>
+                <p>Amazing designs that captivate users.</p>
+            </div>
+            <div class="service">
+                <h3>Development</h3>
+                <p>High-quality code for robust web applications.</p>
+            </div>
+            <div class="service">
+                <h3>SEO</h3>
+                <p>Optimizing your site to rank higher on search engines.</p>
+            </div>
+        </div>
+    </section>
+    <section id="games">
+        <h2>Mini-Games</h2>
+        <div class="games-container">
+            <div class="game">
+                <h3>Tic-Tac-Toe</h3>
+                <div id="tic-tac-toe">
+                    <div class="board">
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                    </div>
+                    <div class="message" id="message"></div>
+                    <button id="restartButton" class="btn">Restart</button>
+                </div>
+            </div>
+            <div class="game">
+                <h3>Rock-Paper-Scissors</h3>
+                <div id="rock-paper-scissors">
+                    <button class="btn" onclick="playRPS('rock')">Rock</button>
+                    <button class="btn" onclick="playRPS('paper')">Paper</button>
+                    <button class="btn" onclick="playRPS('scissors')">Scissors</button>
+                    <div id="rps-result"></div>
+                </div>
+            </div>
+            <div class="game">
+                <h3>Number Guessing Game</h3>
+                <div id="number-guessing-game">
+                    <p>Guess a number between 1 and 100</p>
+                    <input type="number" id="guessInput" min="1" max="100">
+                    <button class="btn" onclick="guessNumber()">Guess</button>
+                    <div id="guess-result"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="friends">
+        <h2>Friends</h2>
+        <div id="friend-list"></div>
+        <form id="add-friend-form">
+            <input type="text" id="friend-username" placeholder="Enter friend's username">
+            <button type="submit" class="btn">Add Friend</button>
+        </form>
+    </section>
+    <section id="chat">
+        <h2>Chat</h2>
+        <div id="chat-box"></div>
+        <form id="chat-form">
+            <input type="text" id="chat-message" placeholder="Type a message">
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Cool Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
